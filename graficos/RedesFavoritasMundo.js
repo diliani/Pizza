@@ -5,7 +5,7 @@ async function redesFavoritasMundo() {
     const res = await fetch(url)
     const dados = await res.json()
     const nomeDasRedes = russia
-    const quantidadeDeUsuarios = 
+    const quantidadeDeUsuarios = 23
 
     const data = [
         {

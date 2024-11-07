@@ -54,7 +54,7 @@ function processarDados(dados) {
     }
 
     criarGrafico(data, layout)
-    incluirTexto(`Como no mundo, a amostra de pessoas entrevistadas por mim, demonstra um apreço pelo <span>Instagram</span> em relação a outras redes.`)
+    incluirTexto('Estes são os 10 países mais extensos (em bilhões de km²)do mundo em 2024 de acordo com o site oficial da Forbes.')
 }
 
 redesSociaisFavoritasMinhaEscola()

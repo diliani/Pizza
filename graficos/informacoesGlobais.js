@@ -11,7 +11,7 @@ async function vizualizarInformacoesGlobais() {
 
     const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
-    paragrafo.innerHTML = `A população mundial atingirá quase 8,2 mil bilhões de habitantes em meados de 2025, segundo as estimativas, um crescimento que deverá continuar na segunda metade deste século. Informações com base no site National Geographic Portugal.`
+    paragrafo.innerHTML = `A população mundial atingirá quase 8,2 bilhões de habitantes em meados de 2025, segundo as estimativas, um crescimento que deverá continuar na segunda metade deste século. Informações com base no site National Geographic Portugal.`
 
     const container = document.getElementById('graficos-container')
     container.appendChild(paragrafo)

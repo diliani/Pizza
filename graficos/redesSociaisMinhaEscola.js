@@ -54,7 +54,7 @@ function processarDados(dados) {
     }
 
     criarGrafico(data, layout)
-    incluirTexto('Estes são os 10 países mais extensos (em bilhões de km²)do mundo em 2024 de acordo com o site oficial da Forbes.')
+    incluirTexto('Estes são os 10 países mais extensos (em bilhões de km²) do mundo em 2024 de acordo com o site oficial da Forbes.')
 }
 
 redesSociaisFavoritasMinhaEscola()

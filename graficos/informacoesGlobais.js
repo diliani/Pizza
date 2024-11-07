@@ -11,7 +11,7 @@ async function vizualizarInformacoesGlobais() {
 
     const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
-    paragrafo.innerHTML = `Esse grafico mostra o número de idiomas indígenas falados em cada região do Brasil.`
+    paragrafo.innerHTML = `A população mundial atingirá quase 8,2 mil milhões de habitantes em meados de 2024, segundo as estimativas, um crescimento que deverá continuar na segunda metade deste século.`
 
     const container = document.getElementById('graficos-container')
     container.appendChild(paragrafo)

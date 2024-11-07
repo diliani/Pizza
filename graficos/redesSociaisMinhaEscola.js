@@ -20,8 +20,8 @@ function processarDados(dados) {
         acc[redesSociais] = (acc[redesSociais] || 0) + 1
         return acc
     }, {})
-    const valores = ['17098242','40','15']
-    const labels = ['Rússia','B','C']
+    const valores = ['17098242','49984670','9596961']
+    const labels = ['Rússia','Canadá','China']
 
     const data = [
         {

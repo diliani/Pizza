@@ -22,7 +22,7 @@ async function quantidadeUsuariosPorRede() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Número de idiomas por região:',
+            text: 'Países Mais Populosos do Mundo',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),

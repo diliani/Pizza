@@ -37,7 +37,7 @@ function processarDados(dados) {
         paper_bgcolor: getCSS('--bg-color'),
         height: 700,
         title: {
-            text: 'Redes sociais que as pessoas da minha escola mais gostam',
+            text: 'Países Mais Extensos',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),

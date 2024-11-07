@@ -11,7 +11,7 @@ async function quantidadeUsuariosPorRede() {
         {
             x: nomeDasRedes, 
             y: quantidadeDeUsuarios, 
-            type: 'line',
+            type: 'bar',
             marker: {
                 color: getCSS('--primary-color')
             }

@@ -1,4 +1,4 @@
-import { getCSS, tickConfig, criarGrafico } from "./common.js"
+import { getCSS, tickConfig, criarGrafico,incluirTexto } from "./common.js"
 
 async function quantidadeUsuariosPorRede() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
@@ -52,6 +52,7 @@ async function quantidadeUsuariosPorRede() {
     }
 
     criarGrafico(data, layout)
+    incluirTexto('Estes são os 10 países mais extensos (em bilhões de km²)do mundo em 2024 de acordo com o site oficial da Forbes.')
 }
 
 quantidadeUsuariosPorRede()

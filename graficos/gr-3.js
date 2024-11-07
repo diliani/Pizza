@@ -22,7 +22,7 @@ async function quantidadeUsuariosPorRede() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Países Mais Populosos do Mundo',
+            text: 'Idiomas Mais Falados do Mundo',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -33,7 +33,7 @@ async function quantidadeUsuariosPorRede() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'países',
+                text: 'idiomas',
                 font: {
                     color: getCSS('--secondary-color')
                 }
@@ -42,7 +42,7 @@ async function quantidadeUsuariosPorRede() {
         yaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'número de habitantes',
+                text: 'número de falantes',
                 font: {
                     color: getCSS('--secondary-color')
                 }
@@ -52,7 +52,7 @@ async function quantidadeUsuariosPorRede() {
     }
 
     criarGrafico(data, layout)
-    incluirTexto('')
+    incluirTexto('Essas informações estão de acordo com a fonte, que é o site da Universidade Metodista de São Paulo.')
 }
 
 quantidadeUsuariosPorRede()

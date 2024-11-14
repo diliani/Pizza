@@ -1,28 +1,43 @@
-import { getCSS, tickConfig, criarGrafico,incluirTexto } from "./common.js"
+import { criarGrafico, getCSS, incluirTexto } from "./common.js"
 
-async function quantidadeUsuariosPorRede() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
-    const res = await fetch(url)
-    const dados = await res.json()
-    const nomeDasRedes = ['Inglês','Mandarim','Hindi','Espanhol','Francês','Árabe','Bengali','Russo','Português','Indonésio']
-    const quantidadeDeUsuarios = ['1268000000','1120000000','637000000','538000000','277000000','274000000','265000000','258000000','252000000','199000000']
+async function redesSociaisFavoritasMinhaEscola() {
+    const dadosLocaisString = localStorage.getItem('respostaRedesSociais')
+    if (dadosLocaisString) {
+        const dadosLocais = JSON.parse(dadosLocaisString)
+        processarDados(dadosLocais)
+    } else {
+        const url = 'https://script.googleusercontent.com/macros/echo?user_content_key=rSe23zaQC7gOvWgFJbdtPaqh7ewsO5hQmusYOeqdorTRN8C25vVV3BicsPoS6HS3jnJY9NHhy_pNZj6prQdxDH3305Mro8vNm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnPvESZ9fvnAeFWqfIvIacdoRZcVMZ-nDSydw9_0gseo2TN3y60rOTtwDBCYnKQf6yIqgf8yOzNfccjP633C9VnHmUmPZvRBJY9z9Jw9Md8uu&lib=MCARBaBtNBMHKiEwMeRap3j6V_G7SlGWF'
+        const res = await fetch(url)
+        const dados = await res.json()
+        localStorage.setItem('respostaRedesSociais', JSON.stringify(dados))
+        processarDados(dados)
+    }
+}
+
+function processarDados(dados) {
+    const redesSociais = dados.slice(1).map(redes => redes[1])
+    const contagemRedesSociais = redesSociais.reduce((acc, redesSociais) => {
+        acc[redesSociais] = (acc[redesSociais] || 0) + 1
+        return acc
+    }, {})
+    const valores = ['17098242','49984670','9596961','9525067','8515767','7692024','3287263','2780400','2724900','2381741']
+    const labels = ['Rússia','Canadá','China','EUA','Brasil','Austrália','Índia','Argentina','Cazaquistão','Argélia']
 
     const data = [
         {
-            x: nomeDasRedes, 
-            y: quantidadeDeUsuarios, 
-            type: 'line',
-            marker: {
-                color: getCSS('--primary-color')
-            }
+            values: valores,
+            labels: labels,
+            type: 'pie',
+            textinfo: 'label+percent'
         }
     ]
 
     const layout = {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
+        height: 700,
         title: {
-            text: 'Idiomas Mais Falados do Mundo',
+            text: 'Países Mais Extensos',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -30,29 +45,16 @@ async function quantidadeUsuariosPorRede() {
                 size: 30
             }
         },
-        xaxis: {
-            tickfont: tickConfig,
-            title: {
-                text: 'idiomas',
-                font: {
-                    color: getCSS('--secondary-color')
-                }
-            }
-        },
-        yaxis: {
-            tickfont: tickConfig,
-            title: {
-                text: 'número de falantes',
-                font: {
-                    color: getCSS('--secondary-color')
-                }
+        legend: {
+            font: {
+                color: getCSS('--primary-color'),
+                size: 16
             }
         }
-
     }
 
     criarGrafico(data, layout)
-    incluirTexto('Essas informações estão de acordo com a fonte, que é o site da Universidade Metodista de São Paulo.')
+    incluirTexto('Estes são os 10 países mais extensos (em bilhões de km²) do mundo em 2024 de acordo com o site oficial da Forbes.')
 }
 
-quantidadeUsuariosPorRede()
+redesSociaisFavoritasMinhaEscola()

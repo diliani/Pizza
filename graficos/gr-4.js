@@ -37,7 +37,7 @@ function processarDados(dados) {
         paper_bgcolor: getCSS('--bg-color'),
         height: 700,
         title: {
-            text: 'Países Mais Extensos',
+            text: 'Variação anual do IPCA, em %',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),

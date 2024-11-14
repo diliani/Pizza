@@ -54,7 +54,7 @@ function processarDados(dados) {
     }
 
     criarGrafico(data, layout)
-    incluirTexto('Estes são os 10 países mais extensos (em bilhões de km²) do mundo em 2024 de acordo com o site oficial da Forbes.')
+    incluirTexto('Observa-se que a inflação apresentou uma tendência de alta entre 2010 e 2015, com uma redução significativa em 2017. Entre 2018 e 2020, a inflação se manteve relativamente estável, com taxas abaixo do 5% ao ano.')
 }
 
 redesSociaisFavoritasMinhaEscola()

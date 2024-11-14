@@ -21,7 +21,7 @@ function processarDados(dados) {
         return acc
     }, {})
     const valores = ['17098242','49984670','9596961','9525067','8515767','7692024','3287263','2780400','2724900','2381741']
-    const labels = ['Rússia','Canadá','China','EUA','Brasil','Austrália','Índia','Argentina','Cazaquistão','Argélia']
+    const labels = ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020']
 
     const data = [
         {

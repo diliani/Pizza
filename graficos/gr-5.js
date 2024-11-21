@@ -22,7 +22,7 @@ async function quantidadeUsuariosPorRede() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Idiomas Mais Falados do Mundo',
+            text: 'População do Brasil ao Longo das Décadas',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),

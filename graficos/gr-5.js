@@ -52,7 +52,7 @@ async function quantidadeUsuariosPorRede() {
     }
 
     criarGrafico(data, layout)
-    incluirTexto('Essas informações estão de acordo com a fonte, que é o site da Universidade Metodista de São Paulo.')
+    incluirTexto('IBGE')
 }
 
 quantidadeUsuariosPorRede()
